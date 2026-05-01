@@ -1,0 +1,37 @@
+{
+  "name": "plotforge-shell",
+  "displayName": "Plotforge",
+  "description": "Plotforge writer project shell integration.",
+  "version": "0.1.0",
+  "publisher": "plotforge",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:plotforge.openProject"
+  ],
+  "capabilities": {
+    "virtualWorkspaces": false,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "plotforge.openProject",
+        "title": "Open Project",
+        "category": "Plotforge"
+      }
+    ]
+  },
+  "dependencies": {
+    "@plotforge/shell-adapter": "file:../../../plotforge-shell-adapter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a89036821784/vscode.git"
+  }
+}
